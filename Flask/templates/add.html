@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mathan Gopal Flask</title>
+		<link rel="stylesheet" href=static/style.css> 
+    </head>
+    <body>
+	    <h1>Add New User Details</h1>
+        <form method="POST" action="/add">
+            <label style="color:blue; font-size:30px; font-weight:bold; font-family: 'Arial', 'Helvetica', sans-serif;" for="name">Name:</label><br><br>
+            <input style="width:300px; height:38px; font-size:20px; border:1px solid;" "type="text" id="name" name="name" required><br><br>
+            <label style="color:blue; font-size:30px; font-weight:bold; font-family: 'Arial', 'Helvetica', sans-serif;" for="age">Age:</label><br><br>
+            <input style="width:300px; height:38px; font-size:20px; border:1px solid;" type="number" id="age" name="age" required><br><br>
+            <label style="color:blue; font-size:30px; font-weight:bold; font-family: 'Arial', 'Helvetica', sans-serif;" for="city">City:</label><br><br>
+            <input style="width:300px; height:38px; font-size:20px; border:1px solid;" type="text" id="city" name="city" required><br><br>
+            <input type="submit" value="Save Details">
+        </form>
+    </body>
+</html>
