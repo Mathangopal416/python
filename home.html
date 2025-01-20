@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Mathan Gopal Flask</title>
+		<link rel="stylesheet" href=static/style.css>
+	</head>
+	<body>
+	    <h1>User Management Using Python Flask & MySQL</h1>
+		<p><a href="{{url_for('add')}}" style="background-color:black;  font-family: 'Arial', 'Helvetica', sans-serif;">Add Users</a></p>
+		<table>
+		    <tr>
+			    <th>ID</th>
+				<th>NAME</th>
+				<th>AGE</th>
+				<th>CITY</th>
+				<th>EDIT</th>
+				<th>DELETE</th>
+			</tr> 
+			{% for data in datas %}
+			<tr>
+			    <td style="font-size:20px;">{{data.id}}</td>
+			    <td style="font-family: 'Arial', 'Helvetica', sans-serif; font-size:20px;">{{data.name}}</td>
+				<td style="font-size:20px;">{{data.age}}</td>
+				<td style="font-family: 'Arial', 'Helvetica', sans-serif; font-size:20px;">{{data.city}}</td>
+				<td><a style="font-family: 'Arial', 'Helvetica', sans-serif;" href="{{ url_for('edit', id=data.id) }}">Edit</a></td>
+				<td><a style="background-color:red; font-family: 'Arial', 'Helvetica', sans-serif;" onclick="return confirm('Are you sure to delete?');" href="{{ url_for('delete', id=data.id) }}">Delete</a></td>
+			</tr>
+			{% endfor %}
+		</table>
+    </body>
+</html>
